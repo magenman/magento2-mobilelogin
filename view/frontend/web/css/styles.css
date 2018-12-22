@@ -1,0 +1,182 @@
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 9999999999; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.71); /* Black w/ opacity */
+}
+.left{
+	float:left !important;
+	margin-right:15px;
+}
+.modal .error {
+	background-color: #faebe7;
+	border-color: transparent -moz-use-text-color transparent #df280a;
+	border-style: solid;
+	color: black;
+	font-weight: 600;
+	width: 80%;
+	 padding: 0 8px;
+}
+.modal .success {
+	background-color: #eff5ea;
+	border-color: transparent -moz-use-text-color transparent #eff5ea;
+	border-style: solid solid solid solid;
+	color: black;
+	font-weight: 600;
+	width: 80%;
+}
+.customer-progress-indicator {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 10003;
+}
+.customer-please-wait{
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+}
+.modal .page-title {
+	color: #2e8ab8;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	
+	
+}
+.modal .error span {
+	font-size: 12px;
+	margin-left: 11px;
+}
+.modal .button {
+	font-weight: bold !important;
+}
+/* Modal Content/Box */
+.mobile-modal-content {
+	background-color: #ECEFF1;
+	border: 3px solid #e0e0e0;
+	margin: 15% 30%;
+	padding: 20px;
+	position: absolute;
+}
+.submitbtnajax, .progress-indicator {
+	float: right;
+}
+.model-bottom {
+	margin-top: 15px;
+}
+/* The Close Button */
+.close {
+	
+	color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    position: absolute;
+    right: 2px;
+    top: -9px;
+}
+
+.closediv {
+	background-color : #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    float: right;
+    height: 20px;
+    position: relative;
+    right: -27px;
+    text-align: center;
+    top: -34px;
+    vertical-align: middle;
+    width: 20px;
+}
+.mobile-modal-content .action {
+    text-transform: uppercase;
+}
+.close:hover, .close:focus {
+	
+	text-decoration: none;
+	cursor: pointer;
+}
+.ajax-login-form .mobile-modal-content {
+	width: 30%;
+}
+.ajax-register-form .mobile-modal-content {
+	width: 40%;
+}
+.ajax-forgot-form .mobile-modal-content {
+	width: 30%;
+}
+.modal input[type="text"], .modal input[type="password"] {
+	border-radius:5px;
+	border:2px solid #d2dae2;
+}
+
+.reg-submit {
+	padding-top: 15px;
+}
+.registraionform, .otpverify {
+	display: none;
+}
+.create-account-page-main-div .progress-indicator{
+	float:left;
+	position:absolute;
+	
+}
+.create-account-resend-otp{
+	float:right;
+	cursor:pointer;
+}
+.create-account-page-main-div .error{
+	color: #e02b27;
+}
+.ajax-register-form .error {
+	color: #903;
+}
+.forgotmobileerror {
+	color: #903;
+}
+.mobileotpsenderror, .checkotperror, .mobileExist, .regcontollererror {
+	display: none;
+}
+.forogotlink {
+	float: left;
+	cursor: pointer;
+}
+.modal .button{
+	font-weight:bold;
+}
+.modal .buttons-set button.button{
+	float:right;
+}
+.modal .buttons-set{
+	margin-top:15px;
+}
+.ajax-login-form ul li{
+	list-style:none !important;
+}
+@media screen and (max-width: 768px)
+{
+	.ajax-login-form .mobile-modal-content, .ajax-register-form .mobile-modal-content, .ajax-forgot-form .mobile-modal-content {
+	  margin: 15%;
+	  width: 70%;
+	}
+}
+@media screen and (max-width: 480px)
+{
+	.ajax-login-form .mobile-modal-content, .ajax-register-form .mobile-modal-content, .ajax-forgot-form .mobile-modal-content {
+		margin-left: 0;
+  		width: 100%;
+	}
+}

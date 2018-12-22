@@ -1,0 +1,68 @@
+<?php
+$om = \Magento\Framework\App\ObjectManager::getInstance();
+$customerSession = $om->get('Magento\Customer\Model\Session');
+$customerId=0;
+$mobileNumber = 0;
+if($customerSession->isLoggedIn()) {
+	
+        $customerId =  $customerSession->getCustomer()->getId();  // get Customer Id
+		$mobileNumber = $customerSession->getCustomer()->getMobilenumber();
+
+}  
+?>
+
+<div class="update_mob">
+	<div class="update_mob_text">
+    	<input type="text" value="<?php echo $mobileNumber; ?>" class="updatemobnumber"/>
+        <input type="hidden" value="<?php echo $customerId; ?>" class="userId" />
+        <span><?php echo __("You will get all the sms on this number"); ?></span>
+    </div>
+    <div class="update_mob_btn">
+    	<input type="button" value="Update Mobile Number" class="updatemobbtn action primary"/>
+         <img class="sms-request-load" src="<?php echo $block->getViewFileUrl('images/loader-1.gif'); ?>" alt="Please Wait..." style="display:none;"/>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+	
+require(['jquery'],function($){
+
+    $(document).ready(function(){
+
+       
+		jQuery(".updatemobbtn").click(function(e) {
+        
+		var ajax_urls = "<?php echo $this->getUrl("mobilelogin/index/updatemobilenumber"); ?>";
+		var mobile = jQuery(".updatemobnumber").val();
+		var userId = jQuery(".userId").val();		
+		
+		jQuery(this).css('display','none');
+		jQuery(".sms-request-load").css('display','block');
+		jQuery.ajax({
+			   url: ajax_urls,
+			   type: 'GET',
+			   data:{mobile:mobile,userId:userId},
+			   async:false,
+			   success: function(data) {
+					if(data == 1){
+						location.reload();
+					}
+				},
+				error: function (data) {
+  					jQuery(".sms-request-load").css('display','none');
+					jQuery(this).css('display','block');
+	            }
+				
+			});
+	
+   		});
+
+		jQuery(".returnbtn").click(function(e) {
+            jQuery(".returnform").css('display','block');
+        });
+    });
+
+});	
+</script>

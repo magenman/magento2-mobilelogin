@@ -1,0 +1,26 @@
+<?php
+
+$helper = $this->helper('Mageman\Mobilelogin\Helper\Data');
+
+?>
+
+<?php 
+if($this->helper('Mageman\Mobilelogin\Helper\Data')->isEnable() == 1){ ?>
+<?php if($helper->getLoginType() == 0){ ?>
+ <?php echo $this->getLayout()->createBlock("Magento\Framework\View\Element\Template")->setTemplate("Mageman_Mobilelogin::ajaxlogin.phtml")->toHtml(); ?>
+ <?php } else { ?>
+ <?php echo $this->getLayout()->createBlock("Magento\Framework\View\Element\Template")->setTemplate("Mageman_Mobilelogin::ajaxotplogin.phtml")->toHtml(); ?>
+ <?php } ?>
+  <?php echo $this->getLayout()->createBlock("Magento\Framework\View\Element\Template")->setTemplate("Mageman_Mobilelogin::ajaxforgot.phtml")->toHtml(); ?>
+    <?php echo $this->getLayout()->createBlock("Magento\Framework\View\Element\Template")->setTemplate("Mageman_Mobilelogin::ajaxregister.phtml")->toHtml(); ?>
+  
+<?php } ?>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Mageman_Mobilelogin/js/script": {}
+        }
+    }
+
+</script>

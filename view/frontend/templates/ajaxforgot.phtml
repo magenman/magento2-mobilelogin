@@ -1,0 +1,116 @@
+<div id="myModal" class="modal ajax-forgot-form">
+  <!-- Modal content -->
+  <div class="mobile-modal-content">
+    <div class="closediv"><span class="close">&times;</span></div>
+    <div class="ajax-forgot-content">
+    	<div id="ajaxlogin-forgot-window" class="login-window account-login">
+            <div class="forgotmobileget">
+            		 <div class="blankerror error" style="display:none">
+                     	<span><?php echo __("Required fields cannot be empty");?></span>
+                     </div>
+            		 <div class="forgotmobileerror error" style="display:none">
+                     	<span><?php echo __("Mobile Number Doesn't Exist");?></span>
+                     </div>
+                     <div class="page-title">
+                        <span><?php
+                        
+                         echo __('Forgot Password') ?></span>
+                    </div>
+                     
+                    <div class="otp-content input-box">
+                     <label for="forgotmob" class="required"><em>*</em><?php echo __('Mobile Number') ?></label>
+                        <input type="text" value="" id="forgotmob" class="mobnumber"/>
+                        <input type="hidden" value="<?php echo $block->getUrl("mobilelogin/index/ajaxforgot"); ?>" class="forgot-otp-url" />
+                     </div>
+                     
+                    <div class="model-bottom"> 
+                        <div class="submitbtnajax">
+                            <input type="button" class="forgotsendotp button primary action" value="Send Otp" />
+                        </div>
+                        <div class="progress-indicator">
+                             <span class="please-wait" id="forgot-sms-please-wait" style="display:none;">
+                                 <img src="<?php echo 
+							$block->getViewFileUrl('Mageman_Mobilelogin::images/ajax-loader.gif');?>" class="v-middle" alt=""/>
+                            </span>
+                        </div>
+                    </div>
+                   
+             </div>
+             <div class="forgototpverify" style="display:none">
+             	 <div class="checkforgototperror" style="display:none">
+                	<span class="error"><?php echo __("Incorect OTP, Please Verify Again.");?></span>
+                </div>	
+                <div class="blankerror error" style="display:none">
+                     	<span><?php echo __("Required fields cannot be empty");?></span>
+                 </div>
+                 <div class="page-title">
+                    <span><?php echo __('OTP Verification') ?></span>
+                </div>
+				<div class="otp-content">
+                 <div class="input-box">
+                 <label for="forgototp" class="required"><em>*</em><?php echo __('One Time Secure Password') ?></label>
+                	<input type="text" value="" id="forgototp"/>
+                    </div>
+                    <input type="hidden" value="<?php echo $block->getUrl("mobilelogin/index/ajaxforgototpverify"); ?>" class="forgotcheckotpurl" />
+                     
+                </div>
+                 <div class="model-bottom"> 
+                    <div class="submitbtnajax">
+                        <input type="button" class="forgotverifyotp button primary action" value="Verify OTP" />
+                    </div>
+                    <div class="progress-indicator">
+                             <span class="please-wait" id="forgot-sms-verify-please-wait" style="display:none;">
+                                <img src="<?php echo 
+							$block->getViewFileUrl('Mageman_Mobilelogin::images/ajax-loader.gif');?>" class="v-middle" alt=""/>
+                            </span>
+                    </div>
+                </div>
+               
+            </div>
+             <div class="setnewpass" style="display:none">
+             	<div class="passmatcherror error" style="display:none">
+                	<span><?php echo __("Password doesn't Match.");?></span>
+                </div>
+                <div class="resetpassvalidation error" style="display:none">
+                	<span><?php echo __("Password should be more then 6 character.");?></span>
+                </div>
+				<div class="blankerror error" style="display:none">
+                     	<span><?php echo __("Required fields cannot be empty");?></span>
+                 </div>
+             	 <div class="page-title">
+                    <span><?php echo __('Reset your Password') ?></span>
+                </div>
+				<div class="otp-content">
+                	<div class="newpass reginput odd ">
+                            <label for="newpassotp" class="required"><em>*</em><?php echo __('New Password') ?></label>
+                            <div class="input-box">
+                                <input type="password" name="newpass" value="" id="newpassotp" class="input-text required-entry " title="<?php echo __('New password') ?>" />
+                            </div>
+                      </div>
+                      <div class="confirmpass reginput odd ">
+                            <label for="newpassconrm" class="required"><em>*</em><?php echo __('Confirm Password') ?></label>
+                            <div class="input-box">
+                                <input type="password" name="newpassconrmotp" value="" id="newpassconrmotp" class="input-text required-entry " title="<?php echo __('Confrim Password') ?>" />
+                            </div>
+                        </div>
+                    <input type="hidden" value="<?php echo $block->getUrl("mobilelogin/index/ajaxupdatepassotp"); ?>" class="updatepassotp" />
+                  
+                     
+                </div>
+                 <div class="model-bottom">
+                    <div class="submitbtnajax">
+                        <input type="button" class="updatepassbtn button primary action" value="Submit" />
+                    </div>
+                    <div class="progress-indicator">
+                                 <span class="please-wait" id="set-new-pass-please-wait" style="display:none;">
+                                    <img src="<?php echo 
+							$block->getViewFileUrl('Mageman_Mobilelogin::images/ajax-loader.gif');?>" class="v-middle" alt=""/>
+                                </span>
+                     </div>
+                </div>
+             </div>
+    	</div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+   <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+        <system>
+            <tab id="mageman" translate="label" sortOrder="100">
+				<label><![CDATA[<img src="https://www.magecomp.com/media/images/magecomp--extension.png" alt="MAGEMAN" height="25" style="vertical-align:middle;"/>]]></label>
+			</tab>
+            <section id="mobilelogin" translate="label" sortOrder="1" showInDefault="1" 
+    showInWebsite="1" showInStore="1">
+                <label>Mobile Login</label>
+                <tab>mageman</tab>
+				<resource>Mageman_Mobilelogin::config</resource>
+				<group id="moduleoption" showInDefault="1" sortOrder="1">
+					<label>Configuration</label>
+					<field id="enable" type="select" showInDefault="1" 
+							sortOrder="0" showInWebsite="1" showInStore="1">
+						<label>Mobile Login</label>
+						<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				   </field>
+			   </group>
+                <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" 
+    showInWebsite="1" showInStore="1">
+                    <label>API Settings</label>
+                    <field id="username" translate="label" type="text" 
+					sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Username</label>
+                        <comment><![CDATA[The user is free to choose username while registering account with MSG91. The maximum limit for username is 17 characters and can only contain alphabets and numbers with no blank spaces or special characters. You can create account at  <a href="https://msg91.com/">https://msg91.com/</a>]]></comment>
+                    </field>
+					<field id="password" translate="label" type="password" 
+					sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Password</label>
+						<comment><![CDATA[The user is free to choose password while registering account with MSG91. The maximum limit for password is 20 characters and can only contain alphabets and numbers with no blank spaces or special characters.]]></comment>
+                    </field>
+					<field id="authkey" translate="label" type="text" 
+					sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Authentication key</label>
+                        <comment><![CDATA[The Sender ID refers to the Alphanumeric Identity of the Sender. For Indian sender IDs, 6 alpha characters are accepted for transactional messages. International senders can have alphanumeric IDs with maximum 11 characters]]></comment>
+                    </field>
+					<field id="routtype" translate="label" type="select" 
+					sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Message Type</label>
+						<source_model>Mageman\Mobilelogin\Model\Routetype</source_model>
+                        <comment><![CDATA[promotinal message = 1 and transactional mesage = 4.]]></comment>
+                    </field>
+					<field id="senderid" translate="label" type="text" 
+					sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Sender ID/Sender Name</label>
+                        <comment><![CDATA[The Sender ID refers to the Alphanumeric Identity of the Sender. For Indian sender IDs, 6 alpha characters are accepted for transactional messages. International senders can have alphanumeric IDs with maximum 11 characters.]]></comment>
+                    </field>
+					<field id="apiurl" translate="label" type="text" 
+					sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>API URL</label>
+						<comment><![CDATA[SMS Gateway URL to Send SMS For E.g MSG91 : https://control.msg91.com/api/sendhttp.php]]></comment>
+                    </field>
+                 </group>  
+				<group id="generalsettings" translate="label" type="text" sortOrder="20" showInDefault="1"     showInWebsite="1" showInStore="1">
+                    <label>General Settings</label>
+                    <field id="logintype" translate="label" type="select" 
+						sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Login Type</label>
+                        <source_model>Mageman\Mobilelogin\Model\Logintype</source_model>
+						<comment><![CDATA[<b>Ajax Login:</b> Login with Either Registered Mobile Number Or Email ID </br><b>Login With OTP:</b> Login Through Secured One Time Password]]></comment>
+                    </field>
+					 <field id="otp" translate="label" type="text" 
+						sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>OTP String Length</label>
+                        <comment><![CDATA[Specify character length for OTP string.]]></comment>
+                    </field>
+					<field id="otptype" translate="label" type="select" 
+						sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>OTP String Type</label>
+                        <source_model>Mageman\Mobilelogin\Model\Otptype</source_model>
+                    </field>
+					<field id="loginnotify" translate="label" type="select" 
+						sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Send Login Notification Email To User</label>
+                         <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+					 <field id="adminemailtemplate" translate="label" sortOrder="60" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+					  <label>Email Template</label>
+					  <comment>Template for Email you receive</comment>
+					  <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+					</field>
+					<field id="adminemailsender" translate="label" sortOrder="70" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+					  <label>Email Sender</label>
+					  <comment>Select sender for Email</comment>
+					  <source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+					</field>
+				</group> 
+				<group id="otpsend" translate="label" type="text" sortOrder="30" showInDefault="1"     showInWebsite="1" showInStore="1">
+                    <label>Registration OTP Custom Message Setting</label>
+					<field id="message" translate="label" type="textarea" 
+						sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>SMS Text</label>
+                        <comment><![CDATA[You can make use of {{shop_name}},{{shop_url}},{{random_code}} variables in your SMS notification text]]></comment>
+                    </field>
+				</group>
+				<group id="forgototpsend" translate="label" type="text" sortOrder="40" showInDefault="1"     showInWebsite="1" showInStore="1">
+                    <label>Forgot Password OTP Custom Message Setting</label>
+					<field id="message" translate="label" type="textarea" 
+						sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>SMS Text</label>
+                        <comment><![CDATA[You can make use of {{shop_name}},{{shop_url}},{{random_code}} variables in your SMS notification text]]></comment>
+                    </field>
+				</group>
+				<group id="loginotpsend" translate="label" type="text" sortOrder="50" showInDefault="1"     showInWebsite="1" showInStore="1">
+                    <label>Login OTP Custom Message Setting</label>
+					<field id="message" translate="label" type="textarea" 
+						sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>SMS Text</label>
+                        <comment><![CDATA[You can make use of {{shop_name}},{{shop_url}},{{random_code}} variables in your SMS notification text]]></comment>
+                    </field>
+				</group>	 
+            </section>
+        </system>
+    </config>

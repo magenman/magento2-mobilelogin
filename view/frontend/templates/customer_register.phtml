@@ -1,0 +1,83 @@
+    <div class="create-account-page-main-div fieldset">
+	    <legend class="legend"><span><?php echo __("Mobile Verification");?></span></legend><br>
+        <input type="hidden" value="<?php echo $block->getUrl("mobilelogin/index/sentotpbyreg"); ?>" class="setdotpurl" />
+        <input type="hidden" value="<?php echo $block->getUrl("mobilelogin/index/ajaxcheckregotp"); ?>" class="checkotpurl" />
+    	<div id="create-account-page" class="login-window account-login">
+        	<div class="mobileget">
+				<div class="otp-content fieldset">
+                	 <span class="field required">
+                     <label for="mobileget" class="label required  ">
+                     	<span><?php echo __('Mobile Number') ?></span>
+                     </label>
+                     </span>
+                	<input type="text" value="" id="mobile-mobileget" class="mobnumber" name="mobilenumber"/>
+                    <div class="mobileotpsenderror error">
+                      <span><?php echo __("Please Enter Valid Mobile.");?></span>
+                    </div>
+                    <div class="mobileExist error">
+                        <span><?php echo __("Mobile Number Already Exist.");?></span>
+                    </div>
+                    <div class="blankerror error" style="display:none">
+                            <span><?php echo __("Required fields cannot be empty");?></span>
+                    </div>
+                    <div class="mobileNotValid error" style="display:none">
+                            <span><?php echo __("Please Enter Valid Mobile Number");?></span>
+                    </div> 
+                 </div>
+                 
+                 <div class="model-bottom"> 
+                    <div class="submitbtnajax" style="float:left">
+                        <input type="button" class="regi-sendotp button primary action" value="<?php echo __("Send Otp");?>" />
+                    </div>
+                     <div class="progress-indicator">
+                             <span class="please-wait" id="reg-sms-please-wait" style="display:none;">
+                                <img src="<?php echo 
+							$block->getViewFileUrl('Mageman_Mobilelogin::images/ajax-loader.gif');?>" class="v-middle" alt=""/>
+                            </span>
+                        </div>
+                </div>
+                
+            </div>
+            <div class="otpverify">
+            	
+                 
+				<div class="otp-content fieldset">
+                	<span class="field required">
+                    <label for="mobile-otp" class="label">
+                     	<span><?php echo __('Enter OTP') ?></span>
+                       
+                     </label>
+                    </span>
+                    <span class="create-account-resend-otp">
+                        <label for="resend-mobile-otp" class="label">
+                            <span class='resend'><?php echo __("Resend OTP");?></span>
+                            <span class='sending' style="display:none"><?php echo __("Sending OTP...");?></span>
+                         </label>
+                    </span>
+                	<input type="text" value="" id="mobile-otp"/>
+                    <div class="checkotperror error">
+                	<span><?php echo __("Incorrect OTP, Please Verify Again.");?></span>
+                    </div>
+                    <div class="blankerror blankotperror error">
+                        <span><?php echo __("Required fields cannot be empty.");?></span>
+                    </div>
+                    
+                              <div class="model-bottom"> 
+                    <div class="submitbtnajax" style="float:left">
+                        <input type="button" class="mobileverifyotp button primary action" value="<?php echo __('Verify OTP') ?>" />
+                    </div>
+               </div>
+               <div class="progress-indicator">
+                   <span class="please-wait" id="reg-otp-verify-please-wait" style="display:none;">
+                     <img src="<?php echo 
+                  $block->getViewFileUrl('Mageman_Mobilelogin::images/ajax-loader.gif');?>" class="v-middle" alt=""/>
+                  </span>
+               </div>
+            </div>
+         </div>
+<div class="customer-progress-indicator" style="display:none">
+   <span class="customer-please-wait" id="customer-register-wait">
+           <img src="<?php echo 
+             $block->getViewFileUrl('Mageman_Mobilelogin::images/ajax-loader.gif');?>" class="v-middle" alt=""/>
+     </span>
+</div>
