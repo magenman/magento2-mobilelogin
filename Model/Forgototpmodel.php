@@ -1,5 +1,5 @@
 <?php
-namespace Mageman\Mobilelogin\Model;
+namespace Magenman\Mobilelogin\Model;
 class Forgototpmodel extends \Magento\Framework\Model\AbstractModel
 {
     /**
@@ -31,6 +31,6 @@ class Forgototpmodel extends \Magento\Framework\Model\AbstractModel
      */
     protected function _construct()
     {
-        $this->_init('Mageman\Mobilelogin\Model\ResourceModel\Forgototpmodel');
+        $this->_init('Magenman\Mobilelogin\Model\ResourceModel\Forgototpmodel');
     }
 }

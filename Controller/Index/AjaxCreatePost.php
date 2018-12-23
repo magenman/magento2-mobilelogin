@@ -1,5 +1,5 @@
 <?php
-namespace Mageman\Mobilelogin\Controller\Index;
+namespace Magenman\Mobilelogin\Controller\Index;
 
 use Magento\Customer\Model\Account\Redirect as AccountRedirect;
 use Magento\Customer\Api\Data\AddressInterface;

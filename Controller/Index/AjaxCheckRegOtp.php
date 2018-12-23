@@ -1,8 +1,8 @@
 <?php
-namespace Mageman\Mobilelogin\Controller\Index;
+namespace Magenman\Mobilelogin\Controller\Index;
 
 use Magento\Framework\App\Action\Context;
-use Mageman\Mobilelogin\Model\RegotpmodelFactory;
+use Magenman\Mobilelogin\Model\RegotpmodelFactory;
 use Magento\Framework\Controller\ResultFactory; 
 
 

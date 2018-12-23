@@ -1,5 +1,5 @@
 <?php
-namespace Mageman\Mobilelogin\Block;
+namespace Magenman\Mobilelogin\Block;
  
 class Mobilelogin extends \Magento\Framework\View\Element\Template
 {

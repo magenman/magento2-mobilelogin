@@ -1,5 +1,5 @@
 <?php
-namespace Mageman\Mobilelogin\Controller\Index;
+namespace Magenman\Mobilelogin\Controller\Index;
 
 use Magento\Framework\App\Action\Context;
 class Ajaxforgototpverify extends \Magento\Framework\App\Action\Action
@@ -7,7 +7,7 @@ class Ajaxforgototpverify extends \Magento\Framework\App\Action\Action
 	public $_helperdata;
 	public function __construct(
 		Context $context,
-		\Mageman\Mobilelogin\Helper\Data $helperData
+		\Magenman\Mobilelogin\Helper\Data $helperData
 	)
     {
         $this->_helperdata = $helperData;

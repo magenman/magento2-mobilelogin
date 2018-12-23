@@ -1,6 +1,6 @@
 <?php
  
-namespace Mageman\Mobilelogin\Controller\Index;
+namespace Magenman\Mobilelogin\Controller\Index;
  
 use Magento\Framework\App\Action\Context;
 use Magento\Customer\Model\Account\Redirect as AccountRedirect;
@@ -23,7 +23,7 @@ class SentOtpByReg extends \Magento\Framework\App\Action\Action
 		Session $customerSession,
 		AccountRedirect $accountRedirect,
 		\Magento\Store\Model\StoreManagerInterface $storeManager,
-		\Mageman\Mobilelogin\Helper\Data $helperData
+		\Magenman\Mobilelogin\Helper\Data $helperData
 		)
     {
         $this->_resultPageFactory = $resultPageFactory;

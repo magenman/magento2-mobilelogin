@@ -1,5 +1,5 @@
 <?php
-namespace Mageman\Mobilelogin\Model\ResourceModel\Loginotpmodel;
+namespace Magenman\Mobilelogin\Model\ResourceModel\Loginotpmodel;
 
 /**
  * Class Collection
@@ -19,7 +19,7 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
      */
     protected function _construct()
     {
-        $this->_init('Mageman\Mobilelogin\Model\Loginotpmodel', 'Mageman\Mobilelogin\Model\ResourceModel\Loginotpmodel');
+        $this->_init('Magenman\Mobilelogin\Model\Loginotpmodel', 'Magenman\Mobilelogin\Model\ResourceModel\Loginotpmodel');
     }
 
     

@@ -1,5 +1,5 @@
 <?php
-namespace Mageman\Mobilelogin\Model\ResourceModel;
+namespace Magenman\Mobilelogin\Model\ResourceModel;
 class Loginotpmodel extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {
     

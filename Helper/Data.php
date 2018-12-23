@@ -1,10 +1,10 @@
 <?php 
-namespace Mageman\Mobilelogin\Helper;
+namespace Magenman\Mobilelogin\Helper;
 
-use Mageman\Mobilelogin\Model\RegotpmodelFactory;
-use Mageman\Mobilelogin\Model\LoginotpmodelFactory;
-use Mageman\Mobilelogin\Model\ForgototpmodelFactory;
-use Mageman\Mobilelogin\Helper\Apicall;
+use Magenman\Mobilelogin\Model\RegotpmodelFactory;
+use Magenman\Mobilelogin\Model\LoginotpmodelFactory;
+use Magenman\Mobilelogin\Model\ForgototpmodelFactory;
+use Magenman\Mobilelogin\Helper\Apicall;
 use \Magento\Framework\Mail\Template\TransportBuilder;
 use \Magento\Framework\Translate\Inline\StateInterface;
 

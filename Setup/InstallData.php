@@ -1,5 +1,5 @@
 <?php
-namespace Mageman\Mobilelogin\Setup;
+namespace Magenman\Mobilelogin\Setup;
  
 use Magento\Customer\Model\Customer;
 use Magento\Customer\Setup\CustomerSetup;

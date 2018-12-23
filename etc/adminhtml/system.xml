@@ -2,14 +2,14 @@
    <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
         <system>
-            <tab id="mageman" translate="label" sortOrder="100">
-				<label><![CDATA[<img src="https://www.magecomp.com/media/images/magecomp--extension.png" alt="MAGEMAN" height="25" style="vertical-align:middle;"/>]]></label>
+            <tab id="magenman" translate="label" sortOrder="100">
+				<label>Magenman</label>
 			</tab>
             <section id="mobilelogin" translate="label" sortOrder="1" showInDefault="1" 
     showInWebsite="1" showInStore="1">
                 <label>Mobile Login</label>
-                <tab>mageman</tab>
-				<resource>Mageman_Mobilelogin::config</resource>
+                <tab>magenman</tab>
+				<resource>Magenman_Mobilelogin::config</resource>
 				<group id="moduleoption" showInDefault="1" sortOrder="1">
 					<label>Configuration</label>
 					<field id="enable" type="select" showInDefault="1" 
@@ -39,7 +39,7 @@
 					<field id="routtype" translate="label" type="select" 
 					sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Message Type</label>
-						<source_model>Mageman\Mobilelogin\Model\Routetype</source_model>
+						<source_model>Magenman\Mobilelogin\Model\Routetype</source_model>
                         <comment><![CDATA[promotinal message = 1 and transactional mesage = 4.]]></comment>
                     </field>
 					<field id="senderid" translate="label" type="text" 
@@ -58,7 +58,7 @@
                     <field id="logintype" translate="label" type="select" 
 						sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Login Type</label>
-                        <source_model>Mageman\Mobilelogin\Model\Logintype</source_model>
+                        <source_model>Magenman\Mobilelogin\Model\Logintype</source_model>
 						<comment><![CDATA[<b>Ajax Login:</b> Login with Either Registered Mobile Number Or Email ID </br><b>Login With OTP:</b> Login Through Secured One Time Password]]></comment>
                     </field>
 					 <field id="otp" translate="label" type="text" 
@@ -69,7 +69,7 @@
 					<field id="otptype" translate="label" type="select" 
 						sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>OTP String Type</label>
-                        <source_model>Mageman\Mobilelogin\Model\Otptype</source_model>
+                        <source_model>Magenman\Mobilelogin\Model\Otptype</source_model>
                     </field>
 					<field id="loginnotify" translate="label" type="select" 
 						sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">

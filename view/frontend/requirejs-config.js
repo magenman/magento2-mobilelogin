@@ -2,7 +2,7 @@
 var config = {
     map: {
         '*': {
-           script : 'Mageman_Mobilelogin/js/script'
+           script : 'Magenman_Mobilelogin/js/script'
         }
     }
 };

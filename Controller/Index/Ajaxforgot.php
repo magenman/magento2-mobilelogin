@@ -1,8 +1,8 @@
 <?php
  
-namespace Mageman\Mobilelogin\Controller\Index;
+namespace Magenman\Mobilelogin\Controller\Index;
 use Magento\Framework\App\Action\Context;
-use Mageman\Mobilelogin\Model\ForgototpmodelFactory;
+use Magenman\Mobilelogin\Model\ForgototpmodelFactory;
 use Magento\Customer\Model\CustomerFactory;
 use Magento\Framework\Controller\ResultFactory;
 class Ajaxforgot extends \Magento\Framework\App\Action\Action
@@ -21,7 +21,7 @@ class Ajaxforgot extends \Magento\Framework\App\Action\Action
     }
    public function execute()
     {
-		$helperData = $this->_objectManager->create('Mageman\Mobilelogin\Helper\Data');		
+		$helperData = $this->_objectManager->create('Magenman\Mobilelogin\Helper\Data');		
 		$randomCode = $helperData->generateRandomString();
 		$message = $helperData->getForgotOtpMessage($randomCode);
 		$mobile = $this->getRequest()->get('mobile');

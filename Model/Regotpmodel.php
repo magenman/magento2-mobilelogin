@@ -1,5 +1,5 @@
 <?php
-namespace Mageman\Mobilelogin\Model;
+namespace Magenman\Mobilelogin\Model;
 class Regotpmodel extends \Magento\Framework\Model\AbstractModel
 {
     /**
@@ -31,6 +31,6 @@ class Regotpmodel extends \Magento\Framework\Model\AbstractModel
      */
     protected function _construct()
     {
-        $this->_init('Mageman\Mobilelogin\Model\ResourceModel\Regotpmodel');
+        $this->_init('Magenman\Mobilelogin\Model\ResourceModel\Regotpmodel');
     }
 }

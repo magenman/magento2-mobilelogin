@@ -1,5 +1,5 @@
 <?php 
-namespace Mageman\Mobilelogin\Helper;
+namespace Magenman\Mobilelogin\Helper;
 use \Magento\Framework\App\Config\ScopeConfigInterface;
 use \Magento\Store\Model\StoreManagerInterface;
 

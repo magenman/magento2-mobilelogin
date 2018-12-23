@@ -1,5 +1,5 @@
 <?php
-namespace Mageman\Mobilelogin\Model\ResourceModel;
+namespace Magenman\Mobilelogin\Model\ResourceModel;
 class Forgototpmodel extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {
     

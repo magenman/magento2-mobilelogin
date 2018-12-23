@@ -1,5 +1,5 @@
 <?php
-namespace Mageman\Mobilelogin\Block\Account\Dashboard;
+namespace Magenman\Mobilelogin\Block\Account\Dashboard;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 class Updatemobile extends \Magento\Config\Block\System\Config\Form\Field
 {

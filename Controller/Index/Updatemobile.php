@@ -1,5 +1,5 @@
 <?php
-namespace Mageman\Mobilelogin\Controller\Index;
+namespace Magenman\Mobilelogin\Controller\Index;
  
 use Magento\Framework\App\Action\Context;
 class Updatemobile extends \Magento\Framework\App\Action\Action

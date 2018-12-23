@@ -1,5 +1,5 @@
 <?php
-namespace Mageman\Mobilelogin\Block;
+namespace Magenman\Mobilelogin\Block;
  
 class Init extends \Magento\Framework\View\Element\Template
 {
@@ -8,6 +8,6 @@ class Init extends \Magento\Framework\View\Element\Template
 		$om = \Magento\Framework\App\ObjectManager::getInstance();
 		/** @var \Magento\Framework\View\Page\Config $page */
 		$page = $om->get('Magento\Framework\View\Page\Config');
-		$page->addPageAsset('Mageman_Mobilelogin::css/styles.css');
+		$page->addPageAsset('Magenman_Mobilelogin::css/styles.css');
 	}
 }

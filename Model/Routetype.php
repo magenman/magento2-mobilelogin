@@ -1,5 +1,5 @@
 <?php
-namespace Mageman\Mobilelogin\Model;
+namespace Magenman\Mobilelogin\Model;
 class Routetype implements \Magento\Framework\Option\ArrayInterface
 {
     public function toOptionArray()

@@ -6,7 +6,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Mageman_Mobilelogin::config" title="Mobile Login" sortOrder="50" />
+                            <resource id="Magenman_Mobilelogin::config" title="Mobile Login" sortOrder="50" />
                         </resource>
                     </resource>
                 </resource>

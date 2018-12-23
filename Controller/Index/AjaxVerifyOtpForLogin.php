@@ -1,8 +1,8 @@
 <?php
-namespace Mageman\Mobilelogin\Controller\Index;
+namespace Magenman\Mobilelogin\Controller\Index;
 
 use Magento\Framework\App\Action\Context;
-use Mageman\Mobilelogin\Model\LoginotpmodelFactory;
+use Magenman\Mobilelogin\Model\LoginotpmodelFactory;
 use Magento\Framework\Controller\ResultFactory; 
 use Magento\Customer\Model\Session;
 class AjaxVerifyOtpForLogin extends \Magento\Framework\App\Action\Action
@@ -13,7 +13,7 @@ class AjaxVerifyOtpForLogin extends \Magento\Framework\App\Action\Action
 	public function __construct(
 		Context $context,
 		LoginotpmodelFactory $modelLoginOtpFactory,
-		\Mageman\Mobilelogin\Helper\Data $helperData,
+		\Magenman\Mobilelogin\Helper\Data $helperData,
 		Session $customerSession
 	
 	){
